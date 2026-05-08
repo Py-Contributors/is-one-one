@@ -9,7 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest # We use Ubuntu (Linux) because it's the industry standard for servers
-
+    permissions:
+      pull-requests: write # This gives the bot permission to comment
+    
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -22,3 +24,25 @@ jobs:
     - name: Run Core Tests
       # It runs the file you merged in the last step.
       run: python test_core.py
+
+    - name: Post Success Comment
+      if: success()
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        message: |
+          ### ✅ Logic Verified!
+          The **Automated Logic Suite** has confirmed that 1 is still 1. 
+          - **Environment:** Ubuntu-latest
+          - **Status:** Mathematical Sanity Confirmed
+          
+          You are safe to merge this chaos.
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Failure Comment
+      if: failure()
+      uses: thollander/actions-comment-pull-request@v2
+      with:
+        message: "### ❌ LOGIC COLLAPSE\nThe automated suite has detected that 1 is no longer 1. Please fix the broken logic before merging."
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      
