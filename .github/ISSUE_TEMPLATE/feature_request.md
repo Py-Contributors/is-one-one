@@ -2,7 +2,7 @@
 name: Chaos Proposal 
 about: Suggest a new, overengineered way to prove 1 == 1.
 title: "[PROPOSAL]: "
-labels: ["enhancement", "help wanted"]
+labels: ["enhancement", "help wanted"] 
 assignees: ''
 ---
 
