@@ -46,6 +46,9 @@ def is_one_using_interdimensional_tax_fraud():
 
     return abs(math.cos(0)) == 1
 
+def is_one_using_binary():
+    return int("1", 2) == 1
+
 def is_one_under_extreme_pressure():
     # Hide the number 1 inside 50 layers of dictionaries
     vault = {"val": 1}
@@ -59,13 +62,24 @@ def is_one_under_extreme_pressure():
         
     return current["val"] == 1
 
+def is_one_using_roman_numerals():
+    roman="I"
+    roman_values={"I":1,"V":5,"X":10}
+    total=0
+    for char in roman:
+        total+= roman_values[char]
+    return total == 1
+
 def is_one_just_to_be_sure(): 
     # The ultimate recursive confirmation
     return all([
         is_one(),
         is_one_unicode_distance(),
         is_one_using_time_travel(),
+        is_one_using_interdimensional_tax_fraud(),# 👈 added here also (extra chaos 😄)
+        is_one_using_binary(),
         is_one_using_interdimensional_tax_fraud(),
+        is_one_using_roman_numerals(), # 👈 added here also (extra chaos 😄)
         is_one_under_extreme_pressure(), # New chaos added here
     ])
 

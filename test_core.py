@@ -16,6 +16,7 @@ def run_verification():
             is_one_one.is_one_unicode_distance,
             is_one_one.is_one_using_time_travel,
             is_one_one.is_one_using_interdimensional_tax_fraud,
+            is_one_one.is_one_using_roman_numerals,
             is_one_one.is_one_under_extreme_pressure
         ]
         
