@@ -81,6 +81,18 @@ If you're reading this and thinking
 
 ## Contributors
 <!-- CONTRIBUTORS_START -->
+<a href="https://github.com/MakarandDeore3009"><img src="https://github.com/MakarandDeore3009.png" width="50px" alt="MakarandDeore3009" /></a>
+<a href="https://github.com/Pavan6559"><img src="https://github.com/Pavan6559.png" width="50px" alt="Pavan6559" /></a>
+<a href="https://github.com/PojashriJM"><img src="https://github.com/PojashriJM.png" width="50px" alt="PojashriJM" /></a>
+<a href="https://github.com/himanshi-0070"><img src="https://github.com/himanshi-0070.png" width="50px" alt="himanshi-0070" /></a>
+<a href="https://github.com/ishwari418"><img src="https://github.com/ishwari418.png" width="50px" alt="ishwari418" /></a>
+<a href="https://github.com/itsdakshjain"><img src="https://github.com/itsdakshjain.png" width="50px" alt="itsdakshjain" /></a>
+<a href="https://github.com/kavita-bande2006"><img src="https://github.com/kavita-bande2006.png" width="50px" alt="kavita-bande2006" /></a>
+<a href="https://github.com/nightcityblade"><img src="https://github.com/nightcityblade.png" width="50px" alt="nightcityblade" /></a>
+<a href="https://github.com/nova1265"><img src="https://github.com/nova1265.png" width="50px" alt="nova1265" /></a>
+<a href="https://github.com/pxlman"><img src="https://github.com/pxlman.png" width="50px" alt="pxlman" /></a>
+<a href="https://github.com/riffpointer"><img src="https://github.com/riffpointer.png" width="50px" alt="riffpointer" /></a>
+<a href="https://github.com/roshniinh"><img src="https://github.com/roshniinh.png" width="50px" alt="roshniinh" /></a>
 <!-- CONTRIBUTORS_END -->
 A huge thanks to the legends who decided to waste their CPU cycles on this:
 
