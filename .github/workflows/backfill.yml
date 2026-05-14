@@ -1,9 +1,7 @@
 name: Backfill Contributors
 
 on:
-  push:
-    branches:
-      - '**' # This tells it to run on EVERY branch you push to
+  workflow_dispatch: # This adds the "Run workflow" button
 
 permissions:
   contents: write
