@@ -80,7 +80,8 @@ If you're reading this and thinking
 
 
 ## Contributors
-
+<!-- CONTRIBUTORS_START -->
+<!-- CONTRIBUTORS_END -->
 A huge thanks to the legends who decided to waste their CPU cycles on this:
 
 <a href="https://github.com/Py-Contributors/is-one-one/graphs/contributors">
