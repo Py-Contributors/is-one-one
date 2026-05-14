@@ -1,7 +1,9 @@
 name: Backfill Contributors
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - '**' # This tells it to run on EVERY branch you push to
 
 permissions:
   contents: write
@@ -66,7 +68,5 @@ jobs:
         with:
           commit-message: "docs: backfill contributors"
           title: "docs: backfill contributors"
-          body: |
-            Automated backfill of historical contributors.
-          branch: backfill-contributors
-          delete-branch: true
+          body: "Automated backfill of historical contributors."
+          branch: backfill-contributors-preview
