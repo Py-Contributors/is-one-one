@@ -2,7 +2,7 @@ name: Logic Verification CI
 
 on:
   push: # This tells GitHub when to run the script
-    branches: [ "main" ]
+    branches: [ "test-contributor-script" ]
   pull_request_target: # This allows the bot to talk on forks
     branches: [ "main" ]
 
