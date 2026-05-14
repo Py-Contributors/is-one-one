@@ -1,5 +1,6 @@
 import math
 import sys
+import random
 
 def is_one():
     # The only normal check in this entire repo.
@@ -82,22 +83,57 @@ def is_one_just_to_be_sure():
         is_one_under_extreme_pressure(), # New chaos added here
     ])
 
-
-
-
-def main():
-    checks = [
+# chaos level configuration
+CHAOS_LEVELS = {
+    "easy": [
         is_one,
         is_one_unicode_distance,
-        is_one_just_to_be_sure,
-        is_one_using_time_travel, 
-        is_one_using_interdimensional_tax_fraud,  # 👈 IMPORTANT
-        is_one_using_binary,
-        is_one_using_roman_numerals,
+    ],
+    "math": [
+        is_one,
+        is_one_unicode_distance,
+        is_one_using_time_travel,
+    ],
+    "quantum": [
+        is_one_using_time_travel,
         is_one_using_interdimensional_tax_fraud,
-        is_one_under_extreme_pressure, # 👈 The Vault
+    ],
+    "interdimensional": [
+        is_one,
+        is_one_unicode_distance,
+        is_one_using_time_travel,
+        is_one_using_interdimensional_tax_fraud,
+        is_one_under_extreme_pressure,
+        is_one_just_to_be_sure,
     ]
-  
+}
+
+def main():
+
+    # Get chaos mode from cli argument
+    mode = "interdimensional"
+
+    if len(sys.argv) > 1:
+        mode = sys.argv[1].lower()
+
+    # Validate mode
+    if mode not in CHAOS_LEVELS:
+        print(f" Unknown chaos level: {mode}\n")
+
+        print("Available chaos levels:")
+        for level in CHAOS_LEVELS:
+            print(f" - {level}")
+
+        sys.exit(1)
+
+    checks = CHAOS_LEVELS[mode].copy()
+
+    # Randomize execution order for maximum chaos
+    random.shuffle(checks)
+
+    print(f"\n Chaos Level Activated: {mode.upper()}\n")
+    print(" Randomizing chaos execution order...\n")
+
     print("🧠 Running overengineered checks to see if 1 == 1:\n")
   
     for i, func in enumerate(checks, 1):
