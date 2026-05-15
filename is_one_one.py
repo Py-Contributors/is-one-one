@@ -2,15 +2,15 @@ import math
 import sys
 
 def is_one():
-    # The only normal check in this entire repo.
+    """Validates one through direct equality."""
     return 1 == 1
 
 def is_one_unicode_distance():
-    # Distance between 'a' and 'b' is 1
+    """Calculates one from adjacent Unicode code points."""
     return ord("b") - ord("a") == 1
 
-# Your chaotic function 🔥
 def is_one_using_time_travel():
+    """Verifies one through time-derived arithmetic."""
     import datetime
     import math
     
@@ -23,6 +23,7 @@ def is_one_using_time_travel():
         return True
 
 def is_one_using_interdimensional_tax_fraud():
+    """Validates one through deterministic cosmic arithmetic."""
     import math
     import datetime
     import random
@@ -46,15 +47,15 @@ def is_one_using_interdimensional_tax_fraud():
     return abs(math.cos(0)) == 1
 
 def is_one_using_binary():
+    """Parses a binary string to validate one."""
     return int("1", 2) == 1
 
 def is_one_under_extreme_pressure():
-    # Hide the number 1 inside 50 layers of dictionaries
+    """Verifies one after nested dictionary traversal."""
     vault = {"val": 1}
     for _ in range(50):
         vault = {"layer": vault}
     
-    # Manually dig it back out
     current = vault
     while "layer" in current:
         current = current["layer"]
@@ -62,6 +63,7 @@ def is_one_under_extreme_pressure():
     return current["val"] == 1
 
 def is_one_using_roman_numerals():
+    """Calculates one from a Roman numeral token."""
     roman="I"
     roman_values={"I":1,"V":5,"X":10}
     total=0
@@ -70,32 +72,33 @@ def is_one_using_roman_numerals():
     return total == 1
 
 def is_one_just_to_be_sure(): 
-    # The ultimate recursive confirmation
+    """Verifies one by aggregating every proof."""
     return all([
         is_one(),
         is_one_unicode_distance(),
         is_one_using_time_travel(),
-        is_one_using_interdimensional_tax_fraud(),# 👈 added here also (extra chaos 😄)
+        is_one_using_interdimensional_tax_fraud(),
         is_one_using_binary(),
         is_one_using_interdimensional_tax_fraud(),
-        is_one_using_roman_numerals(), # 👈 added here also (extra chaos 😄)
-        is_one_under_extreme_pressure(), # New chaos added here
+        is_one_using_roman_numerals(),
+        is_one_under_extreme_pressure(),
     ])
 
 
 
 
 def main():
+    """Runs all available one verification functions."""
     checks = [
         is_one,
         is_one_unicode_distance,
         is_one_just_to_be_sure,
         is_one_using_time_travel, 
-        is_one_using_interdimensional_tax_fraud,  # 👈 IMPORTANT
+        is_one_using_interdimensional_tax_fraud,
         is_one_using_binary,
         is_one_using_roman_numerals,
         is_one_using_interdimensional_tax_fraud,
-        is_one_under_extreme_pressure, # 👈 The Vault
+        is_one_under_extreme_pressure,
     ]
   
     print("🧠 Running overengineered checks to see if 1 == 1:\n")
