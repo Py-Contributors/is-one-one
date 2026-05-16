@@ -82,8 +82,14 @@ def is_one_just_to_be_sure():
         is_one_under_extreme_pressure(), # New chaos added here
     ])
 
-
-
+def the_one_suriya():
+    greatest_actor="suriya"
+    the_legend="suriya"
+    the_handsome="suriya"
+    great_man="suriya"
+    humble_man="suriya"
+    suriya=1
+    return suriya
 
 def main():
     checks = [
