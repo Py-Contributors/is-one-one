@@ -1,32 +1,57 @@
-## Description
+# Description
 
-<!-- Briefly describe what this PR does and why -->
+<!-- Explain what this PR changes and why future archaeologists should care -->
 
 Closes #<!-- issue number -->
 
 ---
 
-## Checklist
+# Type of Change
 
-###  Overengineering Verification
+- [ ] feat
+- [ ] fix
+- [ ] docs
+- [ ] refactor
+- [ ] chore
+- [ ] accidental genius
+
+---
+
+# Checklist
+
+### Overengineering Verification
 - [ ] I have introduced at least one unnecessary abstraction layer
 - [ ] The solution is more complex than the problem warrants
 - [ ] A reasonable engineer would question at least one design decision
-- [ ] I have given something a name that requires a comment to explain
+- [ ] I have named something in a way that requires further explanation
 
-###  Tests
+### Validation
 - [ ] `pytest` passes locally with no failures
 - [ ] New functionality is covered by tests
 - [ ] I have not deleted tests to make CI green
+- [ ] Documentation has been updated if needed
 
-###  Traceability
-- [ ] This PR references a related issue (see "Closes #" above)
-- [ ] The branch name hints at what chaos was committed
+### Traceability
+- [ ] This PR references a related issue
+- [ ] The branch name vaguely reflects the chaos introduced
 
-###  General
+### General
+- [ ] Future contributors may question my decisions, but not my confidence
 - [ ] Code has been self-reviewed
 - [ ] No secrets, credentials, or hardcoded paths were smuggled in
-- [ ] The `main` branch has been protected from suspiciously simple code
+- [ ] I have read the CONTRIBUTING.md guidelines
+
+---
+
+# Screenshots (if applicable)
+
+<!-- Add screenshots, logs, or evidence of your engineering crimes -->
+
+---
+
+# Additional Notes
+
+<!-- Describe any engineering crimes committed responsibly -->
 
 ---
 
