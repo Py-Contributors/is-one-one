@@ -1,13 +1,53 @@
-import math
-import sys
+import importlib
+import inspect
+import pkgutil
+from pathlib import Path
+
+METHOD_FUNCTION_PREFIX = "is_one"
+METHODS_DIRECTORY = Path(__file__).resolve().with_name("methods")
+
+
+def load_method_functions():
+    """Dynamically loads all validation functions from the methods package."""
+    loaded_methods = {}
+
+    if not METHODS_DIRECTORY.exists():
+        return loaded_methods
+
+    for module_info in pkgutil.iter_modules([str(METHODS_DIRECTORY)]):
+        if module_info.name.startswith("_"):
+            continue
+
+        module = importlib.import_module(f"methods.{module_info.name}")
+
+        for name, value in inspect.getmembers(module, inspect.isfunction):
+            if not name.startswith(METHOD_FUNCTION_PREFIX):
+                continue
+            if value.__module__ != module.__name__:
+                continue
+            loaded_methods[name] = value
+
+    return loaded_methods
+
+
+globals().update(load_method_functions())
+
+
+def get_available_checks(include_meta_check=False):
+    """Collects every available one-verification function."""
+    checks = []
+    for name, value in sorted(globals().items()):
+        if not name.startswith(METHOD_FUNCTION_PREFIX):
+            continue
+        if name == "is_one_just_to_be_sure" and not include_meta_check:
+            continue
+        if callable(value):
+            checks.append(value)
+    return checks
 
 def is_one():
     """Validates one through direct equality."""
     return 1 == 1
-
-def is_one_unicode_distance():
-    """Calculates one from adjacent Unicode code points."""
-    return ord("b") - ord("a") == 1
 
 def is_one_using_time_travel():
     """Verifies one through time-derived arithmetic."""
@@ -46,10 +86,6 @@ def is_one_using_interdimensional_tax_fraud():
 
     return abs(math.cos(0)) == 1
 
-def is_one_using_binary():
-    """Parses a binary string to validate one."""
-    return int("1", 2) == 1
-
 def is_one_under_extreme_pressure():
     """Verifies one after nested dictionary traversal."""
     vault = {"val": 1}
@@ -73,32 +109,13 @@ def is_one_using_roman_numerals():
 
 def is_one_just_to_be_sure():
     """Verifies one by aggregating every proof."""
-    return all([
-        is_one(),
-        is_one_unicode_distance(),
-        is_one_using_time_travel(),
-        is_one_using_interdimensional_tax_fraud(),
-        is_one_using_binary(),
-        is_one_using_interdimensional_tax_fraud(),
-        is_one_using_roman_numerals(),
-        is_one_under_extreme_pressure(),
-    ])
+    return all(func() for func in get_available_checks())
 
 
 
 def main():
     """Runs all available one verification functions."""
-    checks = [
-        is_one,
-        is_one_unicode_distance,
-        is_one_just_to_be_sure,
-        is_one_using_time_travel,
-        is_one_using_interdimensional_tax_fraud,
-        is_one_using_binary,
-        is_one_using_roman_numerals,
-        is_one_using_interdimensional_tax_fraud,
-        is_one_under_extreme_pressure,
-    ]
+    checks = get_available_checks(include_meta_check=True)
   
     print("🧠 Running overengineered checks to see if 1 == 1:\n")
   
@@ -114,5 +131,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-

@@ -1,6 +1,6 @@
 # Methods Directory
 
-This document provides a comprehensive list of all the functions available in `is_one_one.py` used to prove that 1 is indeed 1.
+This document provides a comprehensive list of all the functions available through `is_one_one.py` used to prove that 1 is indeed 1. Community methods can live in `methods/*.py`; any function whose name starts with `is_one` is loaded automatically.
 
 ## Available Methods
 
