@@ -88,6 +88,17 @@ def the_one_suriya():
     suriya=1
     return suriya
 
+def is_one_using_vector_magnitude():
+    """Verifies that the magnitude of a unit vector is one"""
+    import numpy as np
+    import random
+    x_component = random.randint(-100, 100)
+    y_component = random.randint(-100, 100)
+    v = np.array([x_component, y_component])
+    magnitude = np.linalg.norm(v)
+    v_hat = v / magnitude
+    return np.linalg.norm(v_hat) == 1
+
 def is_one_just_to_be_sure():
     """Verifies one by aggregating every proof."""
     return all([
@@ -100,6 +111,7 @@ def is_one_just_to_be_sure():
         is_one_using_roman_numerals(),
         is_one_under_extreme_pressure(),
         the_one_suriya(),
+        is_one_using_vector_magnitude(),
     ])
 
 def main():
@@ -115,6 +127,7 @@ def main():
         is_one_using_interdimensional_tax_fraud,
         is_one_under_extreme_pressure,
         the_one_suriya,
+        is_one_using_vector_magnitude,
     ]
   
     print("🧠 Running overengineered checks to see if 1 == 1:\n")
