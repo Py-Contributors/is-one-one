@@ -11,8 +11,9 @@ Welcome! This project is an **Educational Sandbox** designed for first-time cont
 1. **Find an Issue:** Look for issues labeled `good first issue` or `help wanted`.
 2. **Fork & Clone:** Fork the repository to your account and clone it locally.
 3. **Write Overengineered Code:** We don't want `1 == 1`. We want complex logic, API calls, or deep recursion to find the truth.
-4. **Pass the CI:** Make sure your code doesn't break the core logic. Your PR must pass the GitHub Actions check (`verify.yml`).
-5. **Submit PR:** Open a Pull Request, explain your chaotic logic, and link it to the issue you're solving!
+4. **Add Requirements:** If you need libraries to be installed, go to `requirements.txt` in `.github\workflow` and add them
+5. **Pass the CI:** Make sure your code doesn't break the core logic. Your PR must pass the GitHub Actions check (`verify.yml`).
+6. **Submit PR:** Open a Pull Request, explain your chaotic logic, and link it to the issue you're solving!
 
 ## Development Setup
 To ensure your contribution meets our "Professional Chaos" standards:
