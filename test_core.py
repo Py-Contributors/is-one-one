@@ -14,10 +14,14 @@ def run_verification():
         checks = [
             is_one_one.is_one,
             is_one_one.is_one_unicode_distance,
+            is_one_one.is_one_just_to_be_sure,
             is_one_one.is_one_using_time_travel,
             is_one_one.is_one_using_interdimensional_tax_fraud,
+            is_one_one.is_one_using_binary,
             is_one_one.is_one_using_roman_numerals,
-            is_one_one.is_one_under_extreme_pressure
+            is_one_one.is_one_using_interdimensional_tax_fraud,
+            is_one_one.is_one_under_extreme_pressure,
+            is_one_one.is_one_using_vector_magnitude,
         ]
         
         for func in checks:
