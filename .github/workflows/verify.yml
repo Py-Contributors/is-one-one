@@ -33,7 +33,7 @@ jobs:
           echo "No requirements.txt found, skipping installation."
         fi
 
-    - name: Run Core Tests
+    - name: Run Unit Tests
       # It runs the file you merged in the last step.
       run: python test_core.py
 
