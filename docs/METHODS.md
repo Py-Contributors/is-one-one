@@ -60,6 +60,14 @@ from is_one_one import is_one_using_roman_numerals
 is_one_using_roman_numerals() # Returns True
 ```
 
+#### `is_one_using_vector_magnitude()`
+Calculates the magnitude of a unit vector.
+```python
+from is_one_one import is_one_using_vector_magnitude
+
+is_one_using_vector_magnitude() # Returns True
+```
+
 #### `is_one_just_to_be_sure()`
 The ultimate recursive confirmation that runs all other checks to be absolutely sure.
 ```python
