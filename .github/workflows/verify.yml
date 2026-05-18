@@ -25,6 +25,14 @@ jobs:
       with:
         python-version: "3.11"
 
+    - name: Install requirements # added for req
+      run: |
+        if [ -f requirements.txt ]; then
+          python -m pip install -r requirements.txt
+        else
+          echo "No requirements.txt found, skipping installation."
+        fi
+
     - name: Run Core Tests
       # It runs the file you merged in the last step.
       run: python test_core.py
