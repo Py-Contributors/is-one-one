@@ -5,6 +5,14 @@ def is_one():
     """Validates one through direct equality."""
     return 1 == 1
 
+def is_number_one(value: int) -> bool:
+    """The one function that actually takes an argument.
+
+    Returns True if ``value`` equals 1, False otherwise.
+    Useful for negative testing — finally, a function that can return False!
+    """
+    return value == 1
+
 def is_one_unicode_distance():
     """Calculates one from adjacent Unicode code points."""
     return ord("b") - ord("a") == 1
@@ -71,6 +79,15 @@ def is_one_using_roman_numerals():
         total+= roman_values[char]
     return total == 1
 
+def the_one_suriya():
+    greatest_actor="suriya"
+    the_legend="suriya"
+    the_handsome="suriya"
+    great_man="suriya"
+    humble_man="suriya"
+    suriya=1
+    return suriya
+
 def is_one_just_to_be_sure():
     """Verifies one by aggregating every proof."""
     return all([
@@ -82,24 +99,8 @@ def is_one_just_to_be_sure():
         is_one_using_interdimensional_tax_fraud(),
         is_one_using_roman_numerals(),
         is_one_under_extreme_pressure(),
+        the_one_suriya(),
     ])
-
-def is_number_one(value: int) -> bool:
-    """The one function that actually takes an argument.
-
-    Returns True if ``value`` equals 1, False otherwise.
-    Useful for negative testing — finally, a function that can return False!
-    """
-    return value == 1
-
-def the_one_suriya():
-    greatest_actor="suriya"
-    the_legend="suriya"
-    the_handsome="suriya"
-    great_man="suriya"
-    humble_man="suriya"
-    suriya=1
-    return suriya
 
 def main():
     """Runs all available one verification functions."""
@@ -113,6 +114,7 @@ def main():
         is_one_using_roman_numerals,
         is_one_using_interdimensional_tax_fraud,
         is_one_under_extreme_pressure,
+        the_one_suriya,
     ]
   
     print("🧠 Running overengineered checks to see if 1 == 1:\n")
