@@ -105,3 +105,4 @@ If this project gave you brain rot:
 * **Share** it with a friend who writes "too much code."
 
 **Made with ❤️ and ☕ by [itsdakshjain](https://github.com/itsdakshjain)**   
+Fix 7
