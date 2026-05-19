@@ -83,7 +83,9 @@ def is_one_just_to_be_sure():
         is_one_using_roman_numerals(),
         is_one_under_extreme_pressure(),
     ])
-
+def Anik_one(a):
+    a=100/100
+    return bool(a) # cause you cant deny facts
 def is_number_one(value: int) -> bool:
     """The one function that actually takes an argument.
 
