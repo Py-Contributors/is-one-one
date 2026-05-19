@@ -45,6 +45,10 @@ class TestIsOne(unittest.TestCase):
         """Verify that Suriya is number one."""
         self.assertTrue(is_one_one.the_one_suriya())
 
+    def test_is_one_using_vector_magnitude(self):
+        """The magnitude of a unit vector is one."""
+        self.assertTrue(is_one_one.is_one_using_vector_magnitude())
+
     def test_is_one_just_to_be_sure(self):
         """The ultimate recursive confirmation."""
         self.assertTrue(is_one_one.is_one_just_to_be_sure())
