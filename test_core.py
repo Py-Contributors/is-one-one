@@ -1,6 +1,7 @@
-"""Test suite for is_one_one — now with proper unittest structure."""
+"""Test suite for is_one_one -- now with proper unittest structure."""
 
 import unittest
+
 import is_one_one
 import sys
 import io
@@ -51,14 +52,14 @@ class TestIsOne(unittest.TestCase):
 
 
 class TestIsNumberOne(unittest.TestCase):
-    """Negative testing — verify is_number_one rejects non-one values."""
+    """Negative testing -- verify is_number_one rejects non-one values."""
 
     def test_one_is_one(self):
         """1 should be recognized as 1."""
         self.assertTrue(is_one_one.is_number_one(1))
 
     def test_two_is_not_one(self):
-        """2 is not 1 — the first function in this repo that can return False."""
+        """2 is not 1 -- the first function in this repo that can return False."""
         self.assertFalse(is_one_one.is_number_one(2))
 
     def test_zero_is_not_one(self):
@@ -66,12 +67,29 @@ class TestIsNumberOne(unittest.TestCase):
         self.assertFalse(is_one_one.is_number_one(0))
 
     def test_negative_one_is_not_one(self):
-        """-1 is not 1 (even though it contains '1')."""
+        """-1 is not 1, even though it contains '1'."""
         self.assertFalse(is_one_one.is_number_one(-1))
 
     def test_large_number_is_not_one(self):
         """9999 is definitely not 1."""
         self.assertFalse(is_one_one.is_number_one(9999))
+
+
+class TestDynamicMethodLoader(unittest.TestCase):
+    """Verify methods can be loaded from the methods package."""
+
+    def test_dynamic_method_loader_loads_sample_methods(self):
+        self.assertEqual(is_one_one.is_one_using_binary.__module__, "methods.sample_method")
+        self.assertTrue(is_one_one.is_one_using_binary())
+
+    def test_available_checks_include_dynamic_methods(self):
+        check_names = {
+            func.__name__
+            for func in is_one_one.get_available_checks(include_meta_check=True)
+        }
+
+        self.assertIn("is_one_using_binary", check_names)
+        self.assertIn("is_one_unicode_distance", check_names)
 
 
 if __name__ == "__main__":

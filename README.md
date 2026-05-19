@@ -32,7 +32,7 @@ Wanna make this dumber? You're welcome here.
 
 All you have to do is:
 1. **Fork** this repo.
-2. Add a new function to `is_one_one.py`. 
+2. Add a new `is_one...` function in a Python file under `methods/`.
 3. Make sure it returns `True` (because 1 is 1).
 4. **Important:** If your code is easy to understand, you're doing it wrong. We want chaos, not clean code.
 5. Bonus points for using libraries that have no business being in a math script (like `BeautifulSoup` or `Pandas`).

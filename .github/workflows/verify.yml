@@ -41,6 +41,7 @@ jobs:
       if: success() && (github.event_name == 'pull_request' || github.event_name == 'pull_request_target')
       uses: thollander/actions-comment-pull-request@v2
       with:
+        comment_tag: logic-verification-ci
         message: |
           ### ✅ Logic Verified!
           The **Automated Logic Suite** has confirmed that 1 is still 1. 
@@ -54,6 +55,7 @@ jobs:
       if: failure() && (github.event_name == 'pull_request' || github.event_name == 'pull_request_target')
       uses: thollander/actions-comment-pull-request@v2
       with:
+        comment_tag: logic-verification-ci
         message: "### ❌ LOGIC COLLAPSE\nThe automated suite has detected that 1 is no longer 1. Please fix the broken logic before merging."
         github_token: ${{ secrets.GITHUB_TOKEN }}
 
