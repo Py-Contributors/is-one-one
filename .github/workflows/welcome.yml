@@ -5,7 +5,8 @@ on:
     types: [opened]
   pull_request_target:
     types: [opened]
- 
+  workflow_dispatch: # Allows the maintainer to run this workflow manually
+
 jobs:
   welcome:
     runs-on: ubuntu-latest
@@ -20,13 +21,11 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           issue-message: |
-            👋 Welcome to the chaos, @${{ github.event.issue.user.login }}!
+            👋 Welcome to **is-one-one**, @${{ github.event.issue.user.login }}!
  
-            Thanks for opening your first issue on **is-one-one**. Our team (of tired
-            engineering students) will look into this soon! 🎉
+            Thanks for opening your first issue. Our team of engineering students will look into this soon! We love exploring new and creative ways to prove `1 == 1`. 
  
-            While you wait, feel free to browse our [Methods Directory](https://github.com/Py-Contributors/is-one-one/blob/main/docs/METHODS.md)
-            and marvel at all the unnecessary ways we've already proven that `1 == 1`.
+            While you wait, please take a look at our [Contributing Guidelines](https://github.com) to see how we structure our project. We look forward to collaborating with you! 🚀
  
       - name: Welcome First-Time PR Author
         if: github.event_name == 'pull_request_target'
@@ -34,11 +33,8 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           pr-message: |
-            👋 Welcome to the chaos, @${{ github.event.pull_request.user.login }}!
+            👋 Welcome to **is-one-one**, @${{ github.event.pull_request.user.login }}!
  
-            Thanks for opening your first PR on **is-one-one**. Our team (of tired
-            engineering students) will look into this soon! 🎉
+            Thank you for submitting your first pull request! We really appreciate your time and effort in contributing to the project. 
  
-            Our CI bot will now run the **Automated Logic Suite** to confirm that your
-            contribution hasn't accidentally caused `1 != 1`. Sit tight — mathematics
-            is being verified as we speak. 🧠
+            Our automated test suite will run shortly to verify your contribution. In the meantime, please review our [Contributing Guidelines](https://github.com) to ensure your PR matches our repository requirements. Happy coding! 🧠
