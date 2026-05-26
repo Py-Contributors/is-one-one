@@ -49,6 +49,10 @@ class TestIsOne(unittest.TestCase):
         """The magnitude of a unit vector is one."""
         self.assertTrue(is_one_one.is_one_using_vector_magnitude())
 
+    def test_is_one_using_existential_crisis(self):
+        """A full philosophical breakdown confirms 1 == 1."""
+        self.assertTrue(is_one_one.is_one_using_existential_crisis())
+
     def test_is_one_just_to_be_sure(self):
         """The ultimate recursive confirmation."""
         self.assertTrue(is_one_one.is_one_just_to_be_sure())
