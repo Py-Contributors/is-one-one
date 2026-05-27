@@ -103,6 +103,10 @@ def is_one_using_vector_magnitude():
     if np.linalg.norm(v_hat) == 1:
         return True
     return False
+  
+def Anik_one(a):
+    a=100/100
+    return bool(a) # cause you cant deny facts
 
 def is_one_just_to_be_sure():
     """Verifies one by aggregating every proof."""
