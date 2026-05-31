@@ -3,11 +3,10 @@
 import unittest
 import is_one_one
 import sys
-import io
 
 # Fix for Windows console encoding issues with emojis
 if sys.platform == "win32":
-    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8')
 
 
 class TestIsOne(unittest.TestCase):
@@ -56,6 +55,10 @@ class TestIsOne(unittest.TestCase):
     def test_is_one_just_to_be_sure(self):
         """The ultimate recursive confirmation."""
         self.assertTrue(is_one_one.is_one_just_to_be_sure())
+
+    def test_anik_one(self):
+        """Anik's overengineered check confirms 1 == 1."""
+        self.assertTrue(is_one_one.Anik_one())
 
 
 class TestIsNumberOne(unittest.TestCase):
