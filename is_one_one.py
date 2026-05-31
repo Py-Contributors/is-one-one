@@ -100,11 +100,11 @@ def is_one_using_vector_magnitude():
     v = np.array([x_component, y_component])
     magnitude = np.linalg.norm(v)
     v_hat = v / magnitude
-    if np.linalg.norm(v_hat) == 1:
+    if math.isclose(np.linalg.norm(v_hat), 1.0):
         return True
     return False
   
-def Anik_one(a):
+def Anik_one():
     a=100/100
     return bool(a) # cause you cant deny facts
 
@@ -140,9 +140,8 @@ def is_one_just_to_be_sure():
         is_one(),
         is_one_unicode_distance(),
         is_one_using_time_travel(),
-        is_one_using_interdimensional_tax_fraud(),
         is_one_using_binary(),
-        is_one_using_interdimensional_tax_fraud(),
+        Anik_one(),
         is_one_using_roman_numerals(),
         is_one_under_extreme_pressure(),
         the_one_suriya(),
@@ -160,7 +159,7 @@ def main():
         is_one_using_interdimensional_tax_fraud,
         is_one_using_binary,
         is_one_using_roman_numerals,
-        is_one_using_interdimensional_tax_fraud,
+        Anik_one,
         is_one_under_extreme_pressure,
         the_one_suriya,
         is_one_using_vector_magnitude,
