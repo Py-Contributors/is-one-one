@@ -81,13 +81,35 @@ If you're reading this and thinking
 
 ## Contributors
 
-A huge thanks to the legends who decided to waste their CPU cycles on this:
+## 🏆 Contributors
 
-<a href="https://github.com/Py-Contributors/is-one-one/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Py-Contributors/is-one-one" />
-</a>
+Everyone who has helped prove that **1 is still 1**.
 
-*Click on any contributor's avatar above to visit their GitHub profile. New contributors are automatically added here!*
+This wall regenerates automatically whenever contributions are merged.
+
+<!-- CONTRIBUTOR-WALL-START -->
+<div align="center">
+
+### 0 Contributors
+
+<table>
+<tr>
+<td align="center">
+  <a href="https://github.com/itsdakshjain">
+    <img src="https://avatars.githubusercontent.com/itsdakshjain?s=64" width="52" height="52" alt="itsdakshjain" style="border-radius:50%;margin:4px"/>
+    <br/>
+    <sub><b>itsdakshjain</b></sub>
+    <br/>
+    <sub>Maintainer</sub>
+  </a>
+</td>
+</tr>
+</table>
+
+*Auto-updated daily · View all contributors on GitHub*
+
+</div>
+<!-- CONTRIBUTOR-WALL-END -->
 
 
 ## The "Serious" Engineering Side
