@@ -106,8 +106,6 @@ This wall regenerates automatically whenever contributions are merged.
 </tr>
 </table>
 
-*Auto-updated daily · View all contributors on GitHub*
-
 </div>
 <!-- CONTRIBUTOR-WALL-END -->
 
