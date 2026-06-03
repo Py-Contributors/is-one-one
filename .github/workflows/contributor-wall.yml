@@ -2,9 +2,12 @@ name: Update Contributor Wall
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+
   schedule:
     - cron: "0 2 * * *"
+
   workflow_dispatch:
 
 concurrency:
