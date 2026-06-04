@@ -13,18 +13,19 @@ cards = []
 
 # It create one contributor card
 for c in contributors:
-    cards.append(
+  cards.append(
     f"""
-<a href="{c['html_url']}" title="{c['login']} ({c['contributions']} commits)">
-  <img
-    src="{c['avatar_url']}&s=64"
-    width="64"
-    height="64"
-    alt="{c['login']}"
-  /><br/>
-  <sub><b>{c['login']}</b></sub><br/>
-  <sub>{c['contributions']} commits</sub>
+<span align="center">
+<a href="{c['html_url']}">
+<img src="{c['avatar_url']}&s=64"
+     width="64"
+     height="64"
+     alt="{c['login']}" />
+<br/>
+<sub><b>{c['login']}</b></sub>
 </a>
+</span>
+&nbsp;&nbsp;
 """
 )
 
