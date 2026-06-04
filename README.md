@@ -90,21 +90,17 @@ This wall regenerates automatically whenever contributions are merged.
 <!-- CONTRIBUTOR-WALL-START -->
 <div align="center">
 
-### 0 Contributors
+### Contributors
 
-<table>
-<tr>
-<td align="center">
+<p align="center">
   <a href="https://github.com/itsdakshjain">
-    <img src="https://avatars.githubusercontent.com/itsdakshjain?s=64" width="52" height="52" alt="itsdakshjain" style="border-radius:50%;margin:4px"/>
-    <br/>
-    <sub><b>itsdakshjain</b></sub>
-    <br/>
-    <sub>Maintainer</sub>
+    <img src="https://avatars.githubusercontent.com/itsdakshjain?s=64"
+         width="52"
+         height="52"
+         alt="itsdakshjain"
+         style="border-radius:50%;margin:4px"/>
   </a>
-</td>
-</tr>
-</table>
+</p>
 
 </div>
 <!-- CONTRIBUTOR-WALL-END -->
