@@ -14,20 +14,19 @@ cards = []
 # It create one contributor card
 for c in contributors:
     cards.append(
-        f"""
-    <a href="{c['html_url']}" style="text-decoration:none;">
-        <img
-            src="{c['avatar_url']}&s=64"
-            width="64"
-            height="64"
-            alt="{c['login']}"
-            style="border-radius:50%; margin:4px;"
-        />
-        <br/>
-        <sub>{c['login']}</sub>
-    </a>
-    """
-    )
+    f"""
+<a href="{c['html_url']}" title="{c['login']} ({c['contributions']} commits)">
+  <img
+    src="{c['avatar_url']}&s=64"
+    width="64"
+    height="64"
+    alt="{c['login']}"
+  /><br/>
+  <sub><b>{c['login']}</b></sub><br/>
+  <sub>{c['contributions']} commits</sub>
+</a>
+"""
+)
 
 # Build contributor wall
 wall = f"""
@@ -35,9 +34,14 @@ wall = f"""
 
 ### {len(contributors)} Contributors
 
-{"\n".join(cards)}
+<p align="center">
+{"".join(cards)}
+</p>
 
-*Auto-updated daily · <a href="https://github.com/itsdakshjain/is-one-one/graphs/contributors">View all →</a>*
+*Auto-updated daily ·
+<a href="https://github.com/itsdakshjain/is-one-one/graphs/contributors">
+View all →
+</a>*
 
 </div>
 """
